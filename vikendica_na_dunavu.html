@@ -1,0 +1,677 @@
+600: '#9e6d35',
+                        },
+                        sand: '#fdfbf7'<!DOCTYPE html>
+<html lang="bs" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikendica na Dunavu - Oaza Mira i Prirode</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Konfiguracija za Prilagođene Boje -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        river: {
+                            50: '#f2f7f7',
+                            100: '#dfeded',
+                            600: '#2c5252',
+                            800: '#1c3737',
+                            900: '#142929',
+                        },
+                        wood: {
+                            400: '#c89d66',
+                            500: '#b8864a',
+                            600: '#9e6d35',
+                        },
+                        sand: '#fdfbf7'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Ikone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfbf7;
+        }
+        .font-serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased selection:bg-wood-500 selection:text-white">
+
+    <!-- ========================================== -->
+    <!-- NAVIGACIJA (NAVBAR)                        -->
+    <!-- ========================================== -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-river-900/90 backdrop-blur-md text-white border-b border-river-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo / Naziv -->
+            <a href="#" class="flex items-center gap-3 group">
+                <i class="fa-solid font-serif-title text-wood-400 text-2xl group-hover:rotate-12 transition-transform duration-300">⚓</i>
+                <span class="font-serif-title text-xl sm:text-2xl font-semibold tracking-wide text-sand">Oaza Dunav</span>
+            </a>
+
+            <!-- Desktop Meni Linkovi -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wider uppercase text-gray-300">
+                <a href="#o-nama" class="hover:text-wood-400 transition-colors">O vikendici</a>
+                <a href="#pogodnosti" class="hover:text-wood-400 transition-colors">Pogodnosti</a>
+                <a href="#galerija" class="hover:text-wood-400 transition-colors">Galerija</a>
+                <a href="#cjenovnik" class="hover:text-wood-400 transition-colors">Cjenovnik</a>
+                <a href="#kontakt" class="hover:text-wood-400 transition-colors">Kontakt</a>
+            </div>
+
+            <!-- CTA Dugme u Navigaciji -->
+            <div class="hidden md:block">
+                <a href="#rezervacija" class="inline-flex items-center gap-2 bg-wood-500 hover:bg-wood-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold tracking-wide transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    Rezervišite
+                </a>
+            </div>
+
+            <!-- Mobilni Meni Dugme (Hamburger) -->
+            <button id="mobile-menu-btn" class="md:hidden text-sand p-2 focus:outline-none" aria-label="Otvori meni">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobilni Meni Padajući Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-river-900 border-b border-river-800 px-4 pt-4 pb-6 space-y-4">
+            <a href="#o-nama" class="mobile-link block text-gray-200 hover:text-wood-400 py-2">O vikendici</a>
+            <a href="#pogodnosti" class="mobile-link block text-gray-200 hover:text-wood-400 py-2">Pogodnosti</a>
+            <a href="#galerija" class="mobile-link block text-gray-200 hover:text-wood-400 py-2">Galerija</a>
+            <a href="#cjenovnik" class="mobile-link block text-gray-200 hover:text-wood-400 py-2">Cjenovnik</a>
+            <a href="#kontakt" class="mobile-link block text-gray-200 hover:text-wood-400 py-2">Kontakt</a>
+            <a href="#rezervacija" class="mobile-link block w-full text-center bg-wood-500 hover:bg-wood-600 text-white py-3 rounded-lg font-semibold shadow">
+                Rezervišite sada
+            </a>
+        </div>
+    </nav>
+
+
+    <!-- ========================================== -->
+    <!-- 1. HERO SEKCIJA                            -->
+    <!-- ========================================== -->
+    <section class="relative h-screen min-h-[600px] flex items-center justify-center text-center text-white pt-20">
+        <!-- Pozadinska Slika s Tamnim Preklopom (Overlay) -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1920&q=80" 
+                 alt="Vikendica pored rijeke Dunav" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-river-900 via-river-900/60 to-river-900/40"></div>
+        </div>
+
+        <!-- Hero Sadržaj -->
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
+            <span class="inline-block text-wood-400 text-sm sm:text-base font-semibold tracking-widest uppercase mb-4 bg-river-900/50 backdrop-blur-md px-4 py-1.5 rounded-full border border-wood-500/30">
+                Pobegnite u prirodu
+            </span>
+            <h1 class="font-serif-title text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight">
+                Vikendica na Dunavu
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                Savršeno mjesto za odmor, privatnost i neprikosnoveni užitak uz obalu moćne rijeke. Vaša oaza mira iz snova.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#rezervacija" class="w-full sm:w-auto bg-wood-500 hover:bg-wood-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+                    Provjerite dostupnost
+                </a>
+                <a href="#galerija" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-semibold text-lg transition-all">
+                    Pogledajte galeriju
+                </a>
+            </div>
+        </div>
+
+        <!-- Strelica za Skrol naniže -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+            <a href="#o-nama" class="text-white/70 hover:text-white p-2">
+                <i class="fa-solid fa-chevron-down text-xl"></i>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- 2. O NAMA / O VIKENDICI                    -->
+    <!-- ========================================== -->
+    <section id="o-nama" class="py-20 sm:py-28 bg-sand">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <!-- Tekstualni Sadržaj -->
+                <div>
+                    <span class="text-wood-600 font-semibold tracking-wider text-sm uppercase">Odmor bez kompromisa</span>
+                    <h2 class="font-serif-title text-3xl sm:text-4xl lg:text-5xl font-bold text-river-900 mt-2 mb-6">
+                        Dobrodošli u naš mirni kutak uz Dunav
+                    </h2>
+                    <p class="text-gray-600 text-base sm:text-lg leading-relaxed mb-6 font-light">
+                        Naša vikendica je pažljivo projektovana da spoji toplinu prirodnog drveta s modernim luksuzom i udobnošću. Smještena direktno na obali Dunava, nudi nevjerovatan pogled na zalazak sunca, tišinu i potpunu privatnost.
+                    </p>
+                    <p class="text-gray-600 text-base sm:text-lg leading-relaxed mb-8 font-light">
+                        Bilo da planirate porodični odmor, romantični vikend u dvoje ili druženje s prijateljima uz roštilj i bazen, ovdje ćete pronaći sve što vam je potrebno za resetovanje od svakodnevnog stresa.
+                    </p>
+
+                    <!-- Kratke Istaknute Tačke -->
+                    <div class="grid grid-cols-2 gap-4 border-t border-gray-200 pt-6">
+                        <div>
+                            <span class="block text-3xl font-bold font-serif-title text-river-600">100%</span>
+                            <span class="text-sm text-gray-500">Privatnost i mir</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-bold font-serif-title text-river-600">0m</span>
+                            <span class="text-sm text-gray-500">Udaljenost od rijeke</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slikovna Kompozicija -->
+                <div class="relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80" 
+                             alt="Enterijer i terasa vikendice" 
+                             class="w-full h-[450px] object-cover">
+                    </div>
+                    <!-- Manja Slika Preklop -->
+                    <div class="hidden sm:block absolute -bottom-8 -left-8 w-1/2 rounded-xl overflow-hidden shadow-xl border-4 border-sand">
+                        <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=600&q=80" 
+                             alt="Pogled na Dunav" 
+                             class="w-full h-48 object-cover">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- 3. SADRŽAJ I POGODNOSTI (GRID KARTICE)    -->
+    <!-- ========================================== -->
+    <section id="pogodnosti" class="py-20 bg-river-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-wood-600 font-semibold tracking-wider text-sm uppercase">Sve za vašu udobnost</span>
+                <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-river-900 mt-2 mb-4">
+                    Pogodnosti i Sadržaj
+                </h2>
+                <p class="text-gray-600 font-light text-lg">
+                    Opremili smo objekat sa svim sadržajima neophodnim za opuštanje i uživanje tokom cijele godine.
+                </p>
+            </div>
+
+            <!-- Grid Sa Ikonicama -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Kartica 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col items-start">
+                    <div class="w-14 h-14 bg-river-100 text-river-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-water-ladder"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-river-900 mb-2">Bazen / Jakuži</h3>
+                    <p class="text-gray-600 font-light">Privatni bazen u dvorištu sa ležaljkama i grejanim jakužijem za večernje opuštanje.</p>
+                </div>
+
+                <!-- Kartica 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col items-start">
+                    <div class="w-14 h-14 bg-river-100 text-river-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-fire-burner"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-river-900 mb-2">Roštilj & Ljetnjikovac</h3>
+                    <p class="text-gray-600 font-light">Zastakljeni ljetnjikovac sa velikim roštiljem na ćumur/drva i prostranim stolom za ručavanje.</p>
+                </div>
+
+                <!-- Kartica 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col items-start">
+                    <div class="w-14 h-14 bg-river-100 text-river-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-ship"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-river-900 mb-2">Privatni Pristan</h3>
+                    <p class="text-gray-600 font-light">Sopstveni ponton na Dunavu idealan za pecanje, sunčanje ili vezivanje vašeg čamca.</p>
+                </div>
+
+                <!-- Kartica 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col items-start">
+                    <div class="w-14 h-14 bg-river-100 text-river-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-river-900 mb-2">Wi-Fi & Klima</h3>
+                    <p class="text-gray-600 font-light">Brzi optički internet na čitavom imanju i klima uređaji u svim prostorijama.</p>
+                </div>
+
+                <!-- Kartica 5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col items-start">
+                    <div class="w-14 h-14 bg-river-100 text-river-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-river-900 mb-2">Kapacitet do 8 Osoba</h3>
+                    <p class="text-gray-600 font-light">Dvije prostrane spavaće sobe i veliki dnevni boravak pružaju udoban smještaj za 6 do 8 gostiju.</p>
+                </div>
+
+                <!-- Kartica 6 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col items-start">
+                    <div class="w-14 h-14 bg-river-100 text-river-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-paw"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-river-900 mb-2">Pet Friendly</h3>
+                    <p class="text-gray-600 font-light">Vaši kućni ljubimci su više nego dobrodošli da uživaju u velikom ograđenom dvorištu.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- 4. GALERIJA SLIKA                          -->
+    <!-- ========================================== -->
+    <section id="galerija" class="py-20 bg-sand">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-wood-600 font-semibold tracking-wider text-sm uppercase">Vizuelni doživljaj</span>
+                <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-river-900 mt-2 mb-4">
+                    Galerija Vikendice
+                </h2>
+                <p class="text-gray-600 font-light">Kliknite na sliku za uvećani prikaz.</p>
+            </div>
+
+            <!-- Grid Fotografija -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Slika 1 -->
+                <div class="group relative h-64 rounded-2xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80')">
+                    <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=600&q=80" alt="Eksterijer i Dunav" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-river-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Slika 2 -->
+                <div class="group relative h-64 rounded-2xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80')">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Dnevni boravak" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-river-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Slika 3 -->
+                <div class="group relative h-64 rounded-2xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80')">
+                    <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=600&q=80" alt="Bazen i dvorište" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-river-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Slika 4 -->
+                <div class="group relative h-64 rounded-2xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80')">
+                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=600&q=80" alt="Spavaća soba" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-river-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Slika 5 -->
+                <div class="group relative h-64 rounded-2xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80')">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Pristan na reci" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-river-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Slika 6 -->
+                <div class="group relative h-64 rounded-2xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80')">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Večernji ambijent" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-river-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal za Slike -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4" onclick="closeLightbox()">
+        <span class="absolute top-6 right-6 text-white text-4xl cursor-pointer hover:text-wood-400">&times;</span>
+        <img id="lightbox-img" src="" alt="Uvećan prikaz" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl">
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- 5. CJENOVNIK I USLOVI                      -->
+    <!-- ========================================== -->
+    <section id="cjenovnik" class="py-20 bg-river-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-wood-400 font-semibold tracking-wider text-sm uppercase">Transparentne cijene</span>
+                <h2 class="font-serif-title text-3xl sm:text-4xl font-bold mt-2 mb-4">
+                    Cjenovnik & Paketi
+                </h2>
+                <p class="text-gray-300 font-light">Izaberite opciju koja najviše odgovara vašim planovima.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                
+                <!-- Paket 1: Radni dani -->
+                <div class="bg-river-800 p-8 rounded-2xl border border-river-600/40 text-center flex flex-col h-full justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Radni Dani</h3>
+                        <p class="text-gray-400 text-sm mb-6">Ponedjeljak - Četvrtak</p>
+                        <div class="text-4xl font-serif-title font-bold text-wood-400 mb-2">120 € <span class="text-sm font-sans font-normal text-gray-300">/ noć</span></div>
+                        <p class="text-xs text-gray-400 mb-6">*za do 4 osobe (svaka naredna +15€)</p>
+                        <ul class="text-gray-300 text-sm space-y-3 mb-8 text-left">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-wood-400"></i> Min. 2 noćenja</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-wood-400"></i> Korišćenje bazena i jakužija</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-wood-400"></i> Roštilj & Wi-Fi</li>
+                        </ul>
+                    </div>
+                    <a href="#rezervacija" class="block w-full py-3 bg-river-600 hover:bg-river-500 text-white font-semibold rounded-lg transition-colors">Rezervišite</a>
+                </div>
+
+                <!-- Paket 2: Vikend Paket (Istaknut) -->
+                <div class="bg-gradient-to-b from-wood-600 to-wood-500 p-8 rounded-2xl text-center transform lg:-translate-y-2 shadow-2xl relative flex flex-col h-full justify-between border-2 border-wood-400">
+                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-white text-wood-600 font-bold text-xs uppercase px-4 py-1 rounded-full shadow">Najpopularnije</span>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 mt-2">Vikend Paket</h3>
+                        <p class="text-wood-100 text-sm mb-6">Petak - Nedjelja (2 noći)</p>
+                        <div class="text-5xl font-serif-title font-bold mb-2">300 € <span class="text-sm font-sans font-normal text-wood-100">/ vikend</span></div>
+                        <p class="text-xs text-wood-100 mb-6">*Pun kapacitet (do 8 osoba)</p>
+                        <ul class="text-wood-50 text-sm space-y-3 mb-8 text-left">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Ulazak u petak od 14h</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Izlazak u nedjelju do 18h</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Pristan i čamac uračunati</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Svi troškovi uključeni</li>
+                        </ul>
+                    </div>
+                    <a href="#rezervacija" class="block w-full py-3.5 bg-river-900 hover:bg-river-800 text-white font-semibold rounded-lg transition-colors shadow">Rezervišite Vikend</a>
+                </div>
+
+                <!-- Paket 3: Sedmični odmor -->
+                <div class="bg-river-800 p-8 rounded-2xl border border-river-600/40 text-center flex flex-col h-full justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Sedmični Odmor</h3>
+                        <p class="text-gray-400 text-sm mb-6">7 punih dana / 6 noći</p>
+                        <div class="text-4xl font-serif-title font-bold text-wood-400 mb-2">650 € <span class="text-sm font-sans font-normal text-gray-300">/ paket</span></div>
+                        <p class="text-xs text-gray-400 mb-6">*Najbolji odnos cijene i dužine boravka</p>
+                        <ul class="text-gray-300 text-sm space-y-3 mb-8 text-left">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-wood-400"></i> Popust od 20% uračunat</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-wood-400"></i> Neograničeno korišćenje svega</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-wood-400"></i> Besplatno piće dobrodošlice</li>
+                        </ul>
+                    </div>
+                    <a href="#rezervacija" class="block w-full py-3 bg-river-600 hover:bg-river-500 text-white font-semibold rounded-lg transition-colors">Rezervišite Paket</a>
+                </div>
+
+            </div>
+
+            <!-- Napomena za uslove -->
+            <div class="mt-12 text-center text-sm text-gray-400 max-w-2xl mx-auto font-light">
+                * Za praznike (Nova godina, Prvi maj) važe posebni cjenovnici. Depozit za rezervaciju iznosi 30% od ukupnog iznosa. Ulazak (Check-in) od 14h, Izlazak (Check-out) do 10h.
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- 6. FORMULAR ZA REZERVACIJU / UPIT          -->
+    <!-- ========================================== -->
+    <section id="rezervacija" class="py-20 bg-sand">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="bg-white rounded-3xl shadow-xl p-8 sm:p-12 border border-gray-100">
+                <div class="text-center mb-10">
+                    <span class="text-wood-600 font-semibold tracking-wider text-sm uppercase">Brza provjera</span>
+                    <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-river-900 mt-1">
+                        Pošaljite Upit za Rezervaciju
+                    </h2>
+                    <p class="text-gray-500 text-sm mt-2">Popunite formu i odgovorićemo vam u roku od nekoliko sati sa potvrdom dostupnosti.</p>
+                </div>
+
+                <!-- Forma -->
+                <form id="booking-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Ime i Prezime -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Ime i Prezime *</label>
+                            <input type="text" required placeholder="npr. Marko Marković" 
+                                   class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-wood-500 focus:border-wood-500 outline-none transition-all">
+                        </div>
+                        <!-- Telefon -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Broj Telefona / WhatsApp *</label>
+                            <input type="tel" required placeholder="npr. +381 64 123 4567" 
+                                   class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-wood-500 focus:border-wood-500 outline-none transition-all">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <!-- Datum Dolaska -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Datum Dolaska *</label>
+                            <input type="date" required 
+                                   class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-wood-500 focus:border-wood-500 outline-none transition-all">
+                        </div>
+                        <!-- Datum Odlaska -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Datum Odlaska *</label>
+                            <input type="date" required 
+                                   class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-wood-500 focus:border-wood-500 outline-none transition-all">
+                        </div>
+                        <!-- Broj Gostiju -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Broj Gostiju *</label>
+                            <select required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-wood-500 focus:border-wood-500 outline-none transition-all">
+                                <option value="1-2">1 - 2 Osobe</option>
+                                <option value="3-4">3 - 4 Osobe</option>
+                                <option value="5-6">5 - 6 Osoba</option>
+                                <option value="7-8">7 - 8 Osoba</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Poruka -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Dodatna Napomena / Pitanje</label>
+                        <textarea rows="4" placeholder="Navedite ako dolazite sa kućnim ljubimcem ili imate posebne zahteve..." 
+                                  class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-wood-500 focus:border-wood-500 outline-none transition-all"></textarea>
+                    </div>
+
+                    <!-- Submit Dugme -->
+                    <button type="submit" class="w-full bg-wood-500 hover:bg-wood-600 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all text-lg">
+                        Pošaljite Upit
+                    </button>
+                </form>
+
+                <!-- Obavještenje o uspješnom slanju -->
+                <div id="form-success" class="hidden mt-6 p-4 bg-green-50 border border-green-200 text-green-800 rounded-xl text-center">
+                    <i class="fa-solid fa-circle-check text-2xl mb-1 text-green-600 block"></i>
+                    <p class="font-bold">Hvala vam! Vaš upit je uspješno poslat.</p>
+                    <p class="text-sm">Kontaktiraćemo vas u najkraćem mogućem roku.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- 7. KONTAKT SEKCIJA & MAPA                  -->
+    <!-- ========================================== -->
+    <section id="kontakt" class="py-20 bg-river-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Informacije -->
+                <div>
+                    <span class="text-wood-600 font-semibold tracking-wider text-sm uppercase">Stupite u kontakt</span>
+                    <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-river-900 mt-2 mb-6">
+                        Tu smo da odgovorimo na sva vaša pitanja
+                    </h2>
+                    <p class="text-gray-600 font-light mb-8">
+                        Možete nas kontaktirati direktno putem telefona, Viber-a, WhatsApp-a ili nas posjetiti na navedenoj lokaciji.
+                    </p>
+
+                    <div class="space-y-6 mb-10">
+                        
+                        <!-- Poziv -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-white text-river-600 rounded-xl flex items-center justify-center text-xl shadow-sm border border-gray-100 flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-gray-500 uppercase">Direktan Poziv</h4>
+                                <a href="tel:+381641234567" class="text-lg font-bold text-river-900 hover:text-wood-500">+381 64 123 4567</a>
+                            </div>
+                        </div>
+
+                        <!-- Radno Vrijeme Upita -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-white text-river-600 rounded-xl flex items-center justify-center text-xl shadow-sm border border-gray-100 flex-shrink-0">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-gray-500 uppercase">Prijem Poziva & Upita</h4>
+                                <p class="text-lg font-bold text-river-900">Svakim danom: 08:00 - 21:00h</p>
+                            </div>
+                        </div>
+
+                        <!-- Lokacija -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-white text-river-600 rounded-xl flex items-center justify-center text-xl shadow-sm border border-gray-100 flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-gray-500 uppercase">Lokacija</h4>
+                                <p class="text-lg font-bold text-river-900">Obala Dunava bb, 11000 Beograd / Novi Sad</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Brza WhatsApp / Viber Dugmad -->
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://wa.me/381641234567" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl font-semibold shadow transition-all">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp
+                        </a>
+                        <a href="viber://chat?number=%2B381641234567" class="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-xl font-semibold shadow transition-all">
+                            <i class="fa-brands fa-viber text-xl"></i> Viber
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Mapa (Google Maps Iframe) -->
+                <div class="h-[400px] lg:h-auto rounded-3xl overflow-hidden shadow-lg border border-gray-200">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d181138.8037307842!2d20.311746736237274!3d44.81537248037805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7aa3d7b53fbd%3A0x1dcd13e600706a66!2sDanube!5e0!3m2!1sen!2sba!4v1700000000000!5m2!1sen!2sba" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- FOOTER (PODNOŽJE STRANICE)                 -->
+    <!-- ========================================== -->
+    <footer class="bg-river-900 text-gray-400 py-12 border-t border-river-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+            
+            <div>
+                <span class="font-serif-title text-xl text-white font-semibold">Oaza Dunav</span>
+                <p class="text-xs text-gray-400 mt-1">© 2026 Vikendica na Dunavu. Sva prava zadržana.</p>
+            </div>
+
+            <!-- Društvene Mreže -->
+            <div class="flex space-x-6 text-xl">
+                <a href="#" class="hover:text-wood-400 transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-wood-400 transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-wood-400 transition-colors" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- ========================================== -->
+    <!-- JAVASCRIPT LOGIKA                          -->
+    <!-- ========================================== -->
+    <script>
+        // --- Mobilni Meni Skripta ---
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Zatvori mobilni meni kada se klikne na link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // --- Lightbox Galerija Skripta ---
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imageSrc;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+        }
+
+        // --- Simulacija slanja forme ---
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Sprečava stvarno osvježavanje stranice
+            
+            // Prikaži poruku o uspjehu
+            const form = document.getElementById('booking-form');
+            const successMsg = document.getElementById('form-success');
+            
+            form.reset();
+            successMsg.classList.remove('hidden');
+            
+            // Sakrij poruku poslije 5 sekundi
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
